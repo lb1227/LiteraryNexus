@@ -4,6 +4,7 @@ import WorkPage from "./pages/WorkPage.jsx";
 import TopPage from "./pages/TopPage.jsx";
 import AuthorPage from "./pages/AuthorPage.jsx";
 import BrowsePage from "./pages/BrowsePage.jsx";
+import PublishPage from "./pages/PublishPage.jsx";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/author/:id" element={<AuthorPage />} />
         <Route path="/browse" element={<BrowsePage />} />
         <Route path="/top" element={<TopPage />} />
+        <Route path="/publish" element={<PublishPage />} />
         <Route path="*" element={
           <div className="min-h-screen bg-[#0f1115] text-[#e7ecf7] p-6">
             <div className="max-w-3xl mx-auto">
