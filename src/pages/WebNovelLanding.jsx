@@ -165,7 +165,12 @@ function Header({ query, setQuery }){
         </nav>
         <div className="flex items-center gap-2">
           <button className="hidden sm:inline-flex px-3 py-2 rounded-lg border border-white/10 hover:bg-white/5 text-sm">Sign In</button>
-          <button className="inline-flex px-3 py-2 rounded-lg bg-blue-500/90 hover:bg-blue-500 text-sm font-medium shadow">Publish</button>
+          <Link
+            to="/publish"
+            className="inline-flex px-3 py-2 rounded-lg bg-blue-500/90 hover:bg-blue-500 text-sm font-medium shadow"
+          >
+            Publish
+          </Link>
         </div>
       </div>
     </header>
