@@ -5,20 +5,118 @@
     "author": { "id": "k-lumen", "name": "K. Lumen" },
     "genre": "Fantasy",
     "cover_url": "",
-    "synopsis": "A manager reincarnates as the mind behind a dungeon—now quarterly goals include not getting slain.",
+    "synopsis": "A manager reincarnates as the brain of a dungeon. Quarterly goals: profit, retention… and not getting slain.",
     "chapters": [
-      {
-        "id": "ch-1",
-        "index": 1,
-        "title": "Chapter 1: Onboarding",
-        "content_md": "## Onboarding\\n\\nI woke up inside a dashboard. Not a car dashboard—the kind with sliders for lava flow and levers labeled *Minion Attrition*...\\n\\nThe first KPI blinked: **Survive day one.**"
-      },
-      {
-        "id": "ch-2",
-        "index": 2,
-        "title": "Chapter 2: KPIs",
-        "content_md": "## KPIs\\n\\nIt turns out adventurers are a churn problem. I add a new metric: **Hero Deterrence Rate**. The goblins cheer; the finance goblin does not."
-      }
+      { "id": "ch-1", "index": 1, "title": "Chapter 1: Onboarding", "content_md": "## Onboarding\n\nI woke up inside a dashboard. Levers for lava, sliders for minion morale... KPI #1: **Survive day one.**" },
+      { "id": "ch-2", "index": 2, "title": "Chapter 2: KPIs", "content_md": "## KPIs\n\nAdventurers are a churn problem. Finance goblin proposes layoffs; HR goblin proposes a dragon." }
+    ]
+  },
+  {
+    "id": "neon-orchids",
+    "title": "Neon Orchids",
+    "author": { "id": "v-hale", "name": "V. Hale" },
+    "genre": "Sci-Fi",
+    "cover_url": "",
+    "synopsis": "A bike courier uncovers a biotech conspiracy blooming beneath a megacity’s neon canopy.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Chapter 1: Pickup", "content_md": "## Pickup\n\nThe package hums like a wasp nest. The address points upward—always upward." },
+      { "id": "ch-2", "index": 2, "title": "Chapter 2: Bloom", "content_md": "## Bloom\n\nPetals of light unfold on the skyline as the payload warms. Someone paid for silence." }
+    ]
+  },
+  {
+    "id": "paper-moons",
+    "title": "Paper Moons",
+    "author": { "id": "e-lark", "name": "E. Lark" },
+    "genre": "Romance",
+    "cover_url": "",
+    "synopsis": "Two artists exchange letters across parallel worlds, folding hope into every page.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Letter One", "content_md": "## Letter One\n\nDear Stranger, your sky is upside down. Mine is missing stars." },
+      { "id": "ch-2", "index": 2, "title": "Letter Two", "content_md": "## Letter Two\n\nI mailed you a moon made of paper. Did it survive the crossing?" }
+    ]
+  },
+  {
+    "id": "starboard",
+    "title": "Starboard",
+    "author": { "id": "i-kepler", "name": "I. Kepler" },
+    "genre": "Sci-Fi",
+    "cover_url": "",
+    "synopsis": "A freighter pilot takes one job too many beyond the mapped lanes.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Edge Lane", "content_md": "## Edge Lane\n\nAstrogation says 'impossible'. The client says 'double'." },
+      { "id": "ch-2", "index": 2, "title": "Debris Tax", "content_md": "## Debris Tax\n\nYou can’t bribe a void, only the people who name it." }
+    ]
+  },
+  {
+    "id": "quiet-cataclysm",
+    "title": "Quiet Cataclysm",
+    "author": { "id": "noah-l", "name": "Noah L." },
+    "genre": "Horror",
+    "cover_url": "",
+    "synopsis": "The apocalypse arrives politely, in whispers only the sleepless can hear.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Whisperlines", "content_md": "## Whisperlines\n\nBetween 3 and 4 AM the city practices forgetting." },
+      { "id": "ch-2", "index": 2, "title": "Etiquette", "content_md": "## Etiquette\n\nIf the end knocks, do you open?" }
+    ]
+  },
+  {
+    "id": "ink-and-iron",
+    "title": "Ink & Iron",
+    "author": { "id": "m-vale", "name": "M. Vale" },
+    "genre": "Action",
+    "cover_url": "",
+    "synopsis": "A calligrapher-turned-mercenary writes contracts in steel.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "First Stroke", "content_md": "## First Stroke\n\nThe blade signs what the hand cannot." },
+      { "id": "ch-2", "index": 2, "title": "Countermark", "content_md": "## Countermark\n\nInk hides in scars." }
+    ]
+  },
+  {
+    "id": "cinder-crown",
+    "title": "Cinder Crown",
+    "author": { "id": "a-rowan", "name": "A. Rowan" },
+    "genre": "Fantasy",
+    "cover_url": "",
+    "synopsis": "An exiled heir bargains with a fire that remembers kings.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Ash Oath", "content_md": "## Ash Oath\n\nThe crown burned, but it didn’t die." },
+      { "id": "ch-2", "index": 2, "title": "Kindling", "content_md": "## Kindling\n\nSome thrones are forged, others rekindled." }
+    ]
+  },
+  {
+    "id": "equation-hearts",
+    "title": "Equation of Hearts",
+    "author": { "id": "j-nadir", "name": "J. Nadir" },
+    "genre": "Romance",
+    "cover_url": "",
+    "synopsis": "A mathematician and a poet test whether love converges.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Initial Condition", "content_md": "## Initial Condition\n\nAt t=0, we were strangers. Boundary conditions: uncertain." },
+      { "id": "ch-2", "index": 2, "title": "Proof Sketch", "content_md": "## Proof Sketch\n\nAssume attraction. Show it holds for n+1 days." }
+    ]
+  },
+  {
+    "id": "clockwork-pact",
+    "title": "The Clockwork Pact",
+    "author": { "id": "e-bramble", "name": "E. Bramble" },
+    "genre": "Fantasy",
+    "cover_url": "",
+    "synopsis": "A watchmaker binds time to a bargain he doesn’t fully read.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Second Hand", "content_md": "## Second Hand\n\nTime stutters when you turn the wrong gear." },
+      { "id": "ch-2", "index": 2, "title": "Escapement", "content_md": "## Escapement\n\nEvery promise needs a release." }
+    ]
+  },
+  {
+    "id": "ghosts-ganymede",
+    "title": "Ghosts of Ganymede",
+    "author": { "id": "r-sol", "name": "R. Sol" },
+    "genre": "Sci-Fi",
+    "cover_url": "",
+    "synopsis": "A survey crew hears signals from a dead colony under the ice.",
+    "chapters": [
+      { "id": "ch-1", "index": 1, "title": "Blue Ice", "content_md": "## Blue Ice\n\nThe radio spoke our names in someone else’s voice." },
+      { "id": "ch-2", "index": 2, "title": "Echo Chamber", "content_md": "## Echo Chamber\n\nNot all ghosts are past tense." }
     ]
   }
 ]
