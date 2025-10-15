@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 // Webnovel-style Landing Page (single-file React component)
 // - TailwindCSS classes assumed available in your app
@@ -206,8 +207,9 @@ function Hero({ slides, active, setActive }){
                 <div className="text-xs uppercase tracking-widest opacity-80">{s.tag}</div>
                 <h2 className="text-2xl sm:text-4xl font-semibold mt-1">{s.title}</h2>
                 <p className="text-white/80 mt-2 text-sm sm:text-base">{s.subtitle}</p>
-                <button className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/90 hover:bg-blue-500 text-sm font-medium shadow">{s.cta}
-                </button>
+                <Link to="/work/dungeon-ceo" className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/90 hover:bg-blue-500 text-sm font-medium shadow">
+                  Read Chapter 1
+                </Link>
               </div>
             </div>
           </div>
