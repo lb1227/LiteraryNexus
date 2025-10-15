@@ -277,7 +277,7 @@ function TopTen({ list }){
     <section className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow">
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-lg font-semibold">Top 10</h3>
-        <a className="text-sm opacity-80 hover:opacity-100" href="#">View full list</a>
+        <Link to="/top" className="opacity-80 hover:opacity-100">Top 10</Link>
       </div>
       <ol className="space-y-2">
         {list.map((r, idx) => (
