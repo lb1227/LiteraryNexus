@@ -157,7 +157,7 @@ function Header({ query, setQuery }){
           </div>
         </div>
         <nav className="hidden sm:flex items-center gap-4 text-sm">
-          <a className="opacity-80 hover:opacity-100" href="#">Browse</a>
+          <Link className="opacity-80 hover:opacity-100" to="/browse">Browse</Link>
           <a className="opacity-80 hover:opacity-100" href="#">Library</a>
           <Link to="/top" className="opacity-80 hover:opacity-100">Top 10</Link>
         </nav>
