@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebNovelLanding from "./pages/WebNovelLanding.jsx";
+import WorkPage from "./pages/WorkPage.jsx";
 
-function WorkPage() { return <div className="p-6">Work page placeholder</div>; }
 function AuthorPage() { return <div className="p-6">Author page placeholder</div>; }
 function TopPage() { return <div className="p-6">Top 10 placeholder</div>; }
 
