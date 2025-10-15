@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import WebNovelLanding from "./pages/WebNovelLanding.jsx";
 import WorkPage from "./pages/WorkPage.jsx";
 import TopPage from "./pages/TopPage.jsx";
-
-function AuthorPage() { return <div className="p-6">Author page placeholder</div>; }
+import AuthorPage from "./pages/AuthorPage.jsx";
 
 export default function App() {
   return (
