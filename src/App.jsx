@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import WebNovelLanding from "./pages/WebNovelLanding.jsx";
 import WorkPage from "./pages/WorkPage.jsx";
+import TopPage from "./pages/TopPage.jsx";
 
 function AuthorPage() { return <div className="p-6">Author page placeholder</div>; }
-function TopPage() { return <div className="p-6">Top 10 placeholder</div>; }
 
 export default function App() {
   return (
@@ -13,7 +13,6 @@ export default function App() {
         <Route path="/work/:id" element={<WorkPage />} />
         <Route path="/author/:id" element={<AuthorPage />} />
         <Route path="/top" element={<TopPage />} />
-        {/* 404 */}
         <Route path="*" element={
           <div className="min-h-screen bg-[#0f1115] text-[#e7ecf7] p-6">
             <div className="max-w-3xl mx-auto">
