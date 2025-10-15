@@ -1,0 +1,12 @@
+[
+  { "id": "dungeon-ceo",      "title": "Dungeon CEO",        "author": "K. Lumen",  "genre": "Fantasy", "reads_7d": 120000, "reads_30d": 420000, "rating": 4.9, "completion": 0.62 },
+  { "id": "neon-orchids",     "title": "Neon Orchids",       "author": "V. Hale",   "genre": "Sci-Fi",  "reads_7d": 98000,  "reads_30d": 300000, "rating": 4.8, "completion": 0.57 },
+  { "id": "paper-moons",      "title": "Paper Moons",        "author": "E. Lark",   "genre": "Romance", "reads_7d": 86000,  "reads_30d": 270000, "rating": 4.8, "completion": 0.66 },
+  { "id": "starboard",        "title": "Starboard",          "author": "I. Kepler", "genre": "Sci-Fi",  "reads_7d": 102000, "reads_30d": 310000, "rating": 4.7, "completion": 0.59 },
+  { "id": "quiet-cataclysm",  "title": "Quiet Cataclysm",    "author": "Noah L.",   "genre": "Horror",  "reads_7d": 54000,  "reads_30d": 180000, "rating": 4.7, "completion": 0.54 },
+  { "id": "ink-and-iron",     "title": "Ink & Iron",         "author": "M. Vale",   "genre": "Action",  "reads_7d": 49000,  "reads_30d": 150000, "rating": 4.6, "completion": 0.48 },
+  { "id": "cinder-crown",     "title": "Cinder Crown",       "author": "A. Rowan",  "genre": "Fantasy", "reads_7d": 76000,  "reads_30d": 220000, "rating": 4.6, "completion": 0.51 },
+  { "id": "equation-hearts",  "title": "Equation of Hearts", "author": "J. Nadir",  "genre": "Romance", "reads_7d": 71000,  "reads_30d": 210000, "rating": 4.7, "completion": 0.64 },
+  { "id": "clockwork-pact",   "title": "The Clockwork Pact", "author": "E. Bramble","genre": "Fantasy", "reads_7d": 42000,  "reads_30d": 130000, "rating": 4.5, "completion": 0.45 },
+  { "id": "ghosts-ganymede",  "title": "Ghosts of Ganymede", "author": "R. Sol",    "genre": "Sci-Fi",  "reads_7d": 68000,  "reads_30d": 195000, "rating": 4.7, "completion": 0.58 }
+]
