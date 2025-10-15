@@ -5,10 +5,20 @@
     "author": { "id": "k-lumen", "name": "K. Lumen" },
     "genre": "Fantasy",
     "cover_url": "",
-    "synopsis": "A manager reincarnates…",
+    "synopsis": "A manager reincarnates as the mind behind a dungeon—now quarterly goals include not getting slain.",
     "chapters": [
-      { "id": "ch-1", "index": 1, "title": "Chapter 1: Onboarding", "content_md": "## Onboarding\n\nWelcome to the dungeon..." },
-      { "id": "ch-2", "index": 2, "title": "Chapter 2: KPIs", "content_md": "## KPIs\n\nNumbers don’t lie..." }
+      {
+        "id": "ch-1",
+        "index": 1,
+        "title": "Chapter 1: Onboarding",
+        "content_md": "## Onboarding\\n\\nI woke up inside a dashboard. Not a car dashboard—the kind with sliders for lava flow and levers labeled *Minion Attrition*...\\n\\nThe first KPI blinked: **Survive day one.**"
+      },
+      {
+        "id": "ch-2",
+        "index": 2,
+        "title": "Chapter 2: KPIs",
+        "content_md": "## KPIs\\n\\nIt turns out adventurers are a churn problem. I add a new metric: **Hero Deterrence Rate**. The goblins cheer; the finance goblin does not."
+      }
     ]
   }
 ]
