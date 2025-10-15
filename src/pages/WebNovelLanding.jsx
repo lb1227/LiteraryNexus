@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
+
 // Webnovel-style Landing Page (single-file React component)
 // - TailwindCSS classes assumed available in your app
 // - No external UI libs; pure React + Tailwind
@@ -158,6 +159,7 @@ function Header({ query, setQuery }){
         <nav className="hidden sm:flex items-center gap-4 text-sm">
           <a className="opacity-80 hover:opacity-100" href="#">Browse</a>
           <a className="opacity-80 hover:opacity-100" href="#">Library</a>
+          <Link to="/top" className="opacity-80 hover:opacity-100">Top 10</Link>
         </nav>
         <div className="flex items-center gap-2">
           <button className="hidden sm:inline-flex px-3 py-2 rounded-lg border border-white/10 hover:bg-white/5 text-sm">Sign In</button>
