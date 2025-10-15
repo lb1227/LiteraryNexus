@@ -10,7 +10,7 @@ export default function WebNovelLanding() {
   const [query, setQuery] = useState("");
   const [activeSlide, setActiveSlide] = useState(0);
   const [tab, setTab] = useState("Trending");
-  const autoSlideRef = useRef<number | null>(null);
+  const autoSlideRef = useRef(null);
 
   const genres = [
     "All","Fantasy","Romance","Sci‑Fi","Action","Mystery","Slice of Life","Horror","Comedy","Fanfic"
@@ -135,7 +135,7 @@ export default function WebNovelLanding() {
   );
 }
 
-function Header({ query, setQuery }: { query:string; setQuery:(v:string)=>void }){
+function Header({ query, setQuery }){
   return (
     <header className="border-b border-white/10 bg-[#141823]/80 backdrop-blur supports-[backdrop-filter]:bg-[#141823]/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center gap-4 py-3">
@@ -167,7 +167,7 @@ function Header({ query, setQuery }: { query:string; setQuery:(v:string)=>void }
   );
 }
 
-function Subnav({ tab, setTab, genres, activeGenre, setActiveGenre }:{ tab:string; setTab:(v:string)=>void; genres:string[]; activeGenre:string; setActiveGenre:(v:string)=>void; }){
+function Subnav({ tab, setTab, genres, activeGenre, setActiveGenre }){
   return (
     <div className="border-b border-white/10 bg-[#0f1115] sticky top-0 z-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 h-12">
@@ -191,7 +191,7 @@ function Subnav({ tab, setTab, genres, activeGenre, setActiveGenre }:{ tab:strin
   );
 }
 
-function Hero({ slides, active, setActive }:{ slides:any[]; active:number; setActive:(n:number)=>void; }){
+function Hero({ slides, active, setActive }){
   return (
     <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-xl">
       <div className="relative h-64 sm:h-80 md:h-96">
@@ -223,7 +223,7 @@ function Hero({ slides, active, setActive }:{ slides:any[]; active:number; setAc
   );
 }
 
-function Section({ title, children }:{ title:string; children:any }){
+function Section({ title, children }){
   return (
     <section>
       <div className="flex items-center justify-between mb-3">
@@ -235,7 +235,7 @@ function Section({ title, children }:{ title:string; children:any }){
   );
 }
 
-function HorizontalScroller({ children }:{ children:any }){
+function HorizontalScroller({ children }){
   return (
     <div className="relative">
       <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 no-scrollbar">
@@ -245,7 +245,7 @@ function HorizontalScroller({ children }:{ children:any }){
   );
 }
 
-function BookCard({ item, compact=false }:{ item:any; compact?:boolean }){
+function BookCard({ item, compact=false }){
   return (
     <article className={`group rounded-xl border border-white/10 bg-white/5 hover:bg-white/7 transition shadow ${compact? 'min-w-[200px] max-w-[220px] snap-start' : ''}`}>
       <div className="p-3">
@@ -267,7 +267,7 @@ function BookCard({ item, compact=false }:{ item:any; compact?:boolean }){
   );
 }
 
-function TopTen({ list }:{ list:any[] }){
+function TopTen({ list }){
   return (
     <section className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow">
       <div className="flex items-center justify-between mb-2">
@@ -347,7 +347,7 @@ function Footer() {
 }
 
 // --- helpers
-function gradient(i:number){
+function gradient(i){
   const palettes = [
     "bg-[radial-gradient(100%_100%_at_0%_0%,#3b82f6_0%,#111827_60%)]",
     "bg-[radial-gradient(100%_100%_at_100%_0%,#10b981_0%,#111827_60%)]",
@@ -363,7 +363,7 @@ function gradient(i:number){
   return palettes[i % palettes.length];
 }
 
-function heroBg(i:number){
+function heroBg(i){
   const bgs = [
     "bg-[linear-gradient(135deg,#0ea5e9_0%,#1e3a8a_100%)]",
     "bg-[linear-gradient(135deg,#22c55e_0%,#14532d_100%)]",
@@ -372,7 +372,7 @@ function heroBg(i:number){
   return bgs[i % bgs.length];
 }
 
-function rankBg(n:number){
+function rankBg(n){
   if (n === 1) return "bg-yellow-400/20 border-yellow-300/40 text-yellow-200";
   if (n === 2) return "bg-gray-300/20 border-gray-200/40 text-gray-100";
   if (n === 3) return "bg-amber-500/20 border-amber-400/40 text-amber-200";
