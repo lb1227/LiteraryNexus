@@ -1,17 +1,10 @@
 const KEY = "user-works:v1";
 
-function loadAll() {
-  try { return JSON.parse(localStorage.getItem(KEY) || "[]"); }
-  catch { return []; }
-}
-function saveAll(list) {
-  localStorage.setItem(KEY, JSON.stringify(list));
-}
+function loadAll(){ try{ return JSON.parse(localStorage.getItem(KEY)||"[]"); }catch{ return []; } }
+function saveAll(list){ localStorage.setItem(KEY, JSON.stringify(list)); }
 
-export function slugify(s) {
-  return String(s).toLowerCase().trim()
-    .replace(/[^a-z0-9]+/g,"-")
-    .replace(/(^-|-$)/g,"");
+export function slugify(s){
+  return String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
 }
 
 export function getUserWorks() {
