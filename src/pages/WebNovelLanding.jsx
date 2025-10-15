@@ -95,6 +95,7 @@ export default function WebNovelLanding() {
     <div className="min-h-screen bg-[#0f1115] text-[#e7ecf7]">
       <Header query={query} setQuery={setQuery} />
       <Subnav tab={tab} setTab={setTab} genres={genres} activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
+      <ContinueReading />
 
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
         <section className="lg:col-span-8 space-y-6">
