@@ -1,14 +1,25 @@
 import { useParams, Link } from "react-router-dom";
 import { useMemo, useEffect, useState } from "react";
 import works from "../data/works.json";
+import { getProgress, setProgress } from "../lib/progress";
 
 export default function WorkPage() {
   const { id } = useParams(); // e.g., "dungeon-ceo"
   const work = useMemo(() => works.find(w => w.id === id), [id]);
 
-  // default to first chapter when the work changes
   const [chIndex, setChIndex] = useState(0);
-  useEffect(() => setChIndex(0), [id]);
+
+  // when the work changes, restore last-read chapter if any
+  useEffect(() => {
+    if (!work) return;
+    const p = getProgress(id);
+    setChIndex(p?.chIndex ?? 0);
+  }, [id, work]);
+
+  // whenever chapter changes, save progress
+  useEffect(() => {
+    if (work) setProgress(work.id, chIndex);
+  }, [work, chIndex]);
 
   if (!work) {
     return (
@@ -52,8 +63,7 @@ export default function WorkPage() {
               <li key={c.id}>
                 <button
                   onClick={() => setChIndex(i)}
-                  className={`w-full text-left px-2 py-1 rounded-md transition
-                    ${i===chIndex ? "bg-white/10" : "hover:bg-white/5"}`}
+                  className={`w-full text-left px-2 py-1 rounded-md transition ${i===chIndex ? "bg-white/10" : "hover:bg-white/5"}`}
                 >
                   {c.index}. {c.title}
                 </button>
@@ -66,7 +76,6 @@ export default function WorkPage() {
         <section className="rounded-xl border border-white/10 bg-white/5 p-5">
           <h1 className="text-xl font-semibold mb-2">{chapter.title}</h1>
           <article className="prose prose-invert max-w-none">
-            {/* super-light markdown: headings + paragraphs */}
             {chapter.content_md.split("\n").map((line, idx) => {
               if (line.startsWith("## ")) return <h2 key={idx}>{line.slice(3)}</h2>;
               if (line.trim() === "") return <br key={idx} />;
@@ -75,21 +84,15 @@ export default function WorkPage() {
           </article>
 
           <div className="mt-6 flex items-center justify-between">
-            <button
-              onClick={prev}
-              disabled={chIndex === 0}
-              className="px-3 py-2 rounded-lg border border-white/15 disabled:opacity-40"
-            >
+            <button onClick={prev} disabled={chIndex === 0}
+              className="px-3 py-2 rounded-lg border border-white/15 disabled:opacity-40">
               ← Previous
             </button>
             <span className="text-sm opacity-80">
               {chIndex + 1} / {chapters.length}
             </span>
-            <button
-              onClick={next}
-              disabled={chIndex === chapters.length - 1}
-              className="px-3 py-2 rounded-lg bg-blue-500/90 hover:bg-blue-500 disabled:opacity-40"
-            >
+            <button onClick={next} disabled={chIndex === chapters.length - 1}
+              className="px-3 py-2 rounded-lg bg-blue-500/90 hover:bg-blue-500 disabled:opacity-40">
               Next →
             </button>
           </div>
