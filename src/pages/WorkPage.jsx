@@ -1,38 +1,46 @@
 import { useParams, Link } from "react-router-dom";
-import { useMemo, useEffect, useState } from "react";
-import works from "../data/works.json";
+import { useEffect, useState } from "react";
+import { getUserWorkById } from "../lib/userWorks";
 import { getProgress, setProgress } from "../lib/progress";
 
 export default function WorkPage() {
-  const { id } = useParams(); // e.g., "dungeon-ceo"
-  const work = useMemo(() => works.find(w => w.id === id), [id]);
-
+  const { id } = useParams();
+  const [loading, setLoading] = useState(true);
+  const [work, setWork] = useState(null);
   const [chIndex, setChIndex] = useState(0);
 
-  // when the work changes, restore last-read chapter if any
   useEffect(() => {
-    if (!work) return;
-    const p = getProgress(id);
-    setChIndex(p?.chIndex ?? 0);
-  }, [id, work]);
+    setLoading(true);
+    const w = getUserWorkById(id);
+    setWork(w || null);
+    if (w) {
+      const p = getProgress(w.id);
+      setChIndex(p?.chIndex ?? 0);
+    }
+    setLoading(false);
+  }, [id]);
 
-  // whenever chapter changes, save progress
   useEffect(() => {
     if (work) setProgress(work.id, chIndex);
   }, [work, chIndex]);
 
+  if (loading) {
+    return <div className="min-h-screen bg-[#0f1115] text-[#e7ecf7] grid place-items-center"><div className="opacity-80">Loading…</div></div>;
+  }
   if (!work) {
     return (
       <div className="min-h-screen bg-[#0f1115] text-[#e7ecf7] p-6">
         <div className="max-w-3xl mx-auto">
           <Link to="/" className="text-sm opacity-80 hover:opacity-100">← Back</Link>
           <h1 className="text-2xl font-semibold mt-4">Work not found</h1>
+          <p className="opacity-80 mt-2">Create it on the publish page.</p>
+          <Link to="/publish" className="inline-block mt-3 px-3 py-2 rounded-lg bg-blue-500/90 hover:bg-blue-500 text-sm font-medium shadow">Go to Publish</Link>
         </div>
       </div>
     );
   }
 
-  const chapters = work.chapters ?? [];
+  const chapters = work.chapters || [];
   const chapter = chapters[chIndex];
 
   const prev = () => setChIndex(i => Math.max(0, i - 1));
